@@ -3,18 +3,22 @@ Objective: This software is used for pricing the Option using many ways. The Sof
 
 
 Description of files structure : The file contains two main folders as below:
-Main_project_Code
-BinModel.cpp
-GrowOption.cpp
-LookbackOption.cpp
-ParOption.cpp
-PathInfo.cpp
-PricePathGenerator.cpp
-main.cpp
+Main_project_Code 
+BinModel.cpp 
+GrowOption.cpp 
+LookbackOption.cpp 
+ParOption.cpp 
+PathInfo.cpp 
+PricePathGenerator.cpp 
+main.cpp 
 Function Descriptions: We will explore the order of the function calls that are made in the code which invokes each of the other functions before the final calculation
-The first call is made inside Main. cpp, which invokes BinModel 
+
+The first call is made inside Main. cpp, which invokes BinModel  
+
 The BinModel gets user input for S0, U, D, R, K, N. This function also computes the risk-neutral probability and computes the stock price at each node i
+
 Then the call goes to price Pathgenerator which is the code that does major calculation which involves the calculation of path, probability and price by calling the respective functions
+
 The Pathinfo option is majorly used to return the results such as Pathnumber, Probability, Path, Prices according to respective path numbers
 AsianCallPayoffOption.cpp, ParOption.cpp, LookbackOption.cpp and GrowOption.cpp is used for calculating Asian Call, Parisian, Lookback and Consecutive Growth options respectively.
 The above-mentioned files call the Pathdependent option for calculating the final price for each of the option 
